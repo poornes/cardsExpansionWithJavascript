@@ -1,0 +1,43 @@
+body {
+    font-family: arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+}
+.panel {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 50px;
+    margin: 10px;
+    flex: 0.5;
+    position: relative;
+    cursor: pointer;
+    transition: flex .7s ease-in;
+}
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(225, 225, 225, .5);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 1.2vw;
+    opacity: 0;
+    transition: opacity .6s ease-in-out 0.4s;
+}
+.panel.active {
+    flex:5;
+}
+.panel.active h3 {
+    opacity: 1;
+}
